@@ -1,0 +1,1 @@
+export const FronyxPartyIdConstant = 'FRX';

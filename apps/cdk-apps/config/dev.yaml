@@ -1,0 +1,26 @@
+logsProcessorStack:
+  stage: 'production'
+  eventBusName: 'LogsProcessorStack'
+  pollingEnabled: 'false'
+  trafficDataEnabled: 'false'
+  putConsumer: 'false'
+  patchConsumer: 'false'
+  utilisationRadarEnabled: 'false'
+toolkit:
+  accessToken: 'replace-me'
+  url: 'https://toolkit.example.com'
+backendApi:
+  url: 'http://localhost:3333'
+redis:
+  write:
+    url: 'localhost'
+mongoDb:
+  url: 'mongodb://localhost:27017/availabilityPredictions'
+sentry:
+  dsn: ''
+evFreaksApi:
+  url: 'https://partner-api.example.com/api'
+  pem: ''
+  kid: 'replace-me'
+dlqConsumerStack:
+  stage: 'production'

@@ -1,0 +1,44 @@
+{
+    "compileOnSave": false,
+    "compilerOptions": {
+        "rootDir": ".",
+        "sourceMap": true,
+        "declaration": false,
+        "moduleResolution": "node",
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "strictPropertyInitialization": false,
+        "importHelpers": true,
+        "target": "es2019",
+        "module": "esnext",
+        "lib": ["es2019", "dom"],
+        "skipLibCheck": true,
+        "skipDefaultLibCheck": true,
+        "baseUrl": ".",
+        "paths": {
+            "@fronyx/authentications": ["libs/authentications/src/index.ts"],
+            "@fronyx/cache": ["libs/cache/src/index.ts"],
+            "@fronyx/charge-gpt": ["libs/charge-gpt/src/index.ts"],
+            "@fronyx/timestream": ["libs/timestream/src/index.ts"],
+            "@fronyx/cloudwatch-logger": [
+                "libs/cloudwatch-logger/src/index.ts"
+            ],
+            "@fronyx/configurations": ["libs/configurations/src/index.ts"],
+            "@fronyx/data-stream": ["libs/data-stream/src/index.ts"],
+            "@fronyx/data-transfer-object": [
+                "libs/data-transfer-object/src/index.ts"
+            ],
+            "@fronyx/locations": ["libs/locations/src/index.ts"],
+            "@fronyx/mailing": ["libs/mailing/src/index.ts"],
+            "@fronyx/message-processor": [
+                "libs/message-processor/src/index.ts"
+            ],
+            "@fronyx/persistence": ["libs/persistence/src/index.ts"],
+            "@fronyx/translations": ["libs/translations/src/index.ts"],
+            "@fronyx/predictions": ["libs/predictions/src/index.ts"],
+            "@fronyx/queue": ["libs/queue/src/index.ts"],
+            "@fronyx/toolkit": ["libs/toolkit/src/index.ts"]
+        }
+    },
+    "exclude": ["node_modules", "tmp"]
+}

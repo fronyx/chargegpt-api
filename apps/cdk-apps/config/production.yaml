@@ -1,0 +1,44 @@
+logsProcessorStack:
+  stage: 'production'
+  eventBusName: 'LogsProcessorStack'
+  pollingEnabled: 'false'
+  trafficDataEnabled: 'false'
+  putConsumer: 'false'
+  patchConsumer: 'false'
+  utilisationRadarEnabled: 'false'
+toolkit:
+  accessToken: 'replace-me'
+  url: 'https://toolkit.example.com'
+backendApi:
+  url: 'https://api.example.com/api'
+mongoDb:
+  url: 'mongodb://localhost:27017/availabilityPredictions'
+sentry:
+  dsn: ''
+evFreaksApi:
+  url: 'https://partner-api.example.com/api'
+  pem: ''
+  kid: 'replace-me'
+db:
+  crawling:
+    host: 'localhost'
+    port: '5432'
+    user: 'postgres'
+    pass: 'replace-me'
+    name: 'postgres'
+  predictions:
+    host: 'localhost'
+    port: '5432'
+    user: 'postgres'
+    pass: 'replace-me'
+    name: 'postgres'
+redis:
+  port: '6379'
+  host:
+    rw: 'localhost'
+    ro: 'localhost'
+backendApiStack:
+  stage: 'production'
+  recordName: 'api'
+dlqConsumerStack:
+  stage: 'production'

@@ -1,0 +1,1 @@
+export const MAX_GENERATED_TIMESTAMP = 1440;

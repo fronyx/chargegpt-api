@@ -1,0 +1,24 @@
+toolkit:
+  accessToken: 'replace-me'
+  url: 'https://toolkit.example.com'
+backendApi:
+  url: 'https://api.example.com'
+db:
+  crawling:
+    host: 'localhost'
+    port: '5432'
+    user: 'postgres'
+    pass: 'somePassword'
+    name: 'crawling'
+  predictions:
+    host: 'localhost'
+    port: '5432'
+    user: 'postgres'
+    pass: 'somePassword'
+    name: 'main'
+redis:
+  port: '6379'
+  host:
+    rw: 'localhost'
+    ro: 'localhost'
+

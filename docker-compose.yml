@@ -1,0 +1,12 @@
+services:
+  backend-api:
+    image: backend-api
+    build:
+      context: .
+      dockerfile: ./apps/backend-api/Dockerfile
+    networks:
+      - fronyx-network
+
+networks:
+  fronyx-network:
+    external: true

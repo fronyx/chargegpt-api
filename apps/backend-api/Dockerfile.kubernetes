@@ -1,0 +1,30 @@
+FROM node:20-buster
+WORKDIR /app/
+
+RUN mkdir apps
+RUN mkdir apps/backend-api
+RUN mkdir apps/sentry
+RUN mkdir -p apps/cdk-apps/src/shared
+RUN mkdir environments
+RUN mkdir libs
+
+COPY package.json ./
+COPY package-lock.json ./
+COPY decorate-angular-cli.js ./
+
+RUN npm install
+RUN npm i @ffmpeg-installer/ffmpeg
+RUN npm i @ffprobe-installer/linux-x64
+
+COPY nx.json ./
+COPY angular.json ./
+COPY tsconfig.base.json ./
+COPY apps/cdk-apps/src/shared ./apps/cdk-apps/src/shared
+COPY apps/backend-api ./apps/backend-api
+COPY apps/sentry ./apps/sentry
+COPY environments environments
+COPY libs ./libs
+
+EXPOSE 8443
+
+CMD npm run start
